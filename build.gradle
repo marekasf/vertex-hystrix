@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	compile group: 'io.vertx', name: 'vertx-core', version: vertxVersion
+	compile group: 'io.vertx', name: 'vertx-platform', version: vertxVersion
+
+	compile(group: 'com.netflix.rxjava', name: 'rxjava-async-util', version: '0.20.4')
+	compile(group: 'com.netflix.hystrix', name: 'hystrix-metrics-event-stream', version: '1.4.0-RC5') {
+		exclude(module: 'slf4j-log4j12')
+		exclude(module: 'slf4j-api')
+		exclude(module: 'commons-logging')
+	}
+
+}
