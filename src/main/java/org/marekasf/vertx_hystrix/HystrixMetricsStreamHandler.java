@@ -13,13 +13,12 @@ import org.vertx.java.core.http.HttpServerRequest;
 import com.netflix.config.DynamicIntProperty;
 import com.netflix.config.DynamicPropertyFactory;
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsPoller;
-import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 
 import rx.schedulers.Schedulers;
 
 public class HystrixMetricsStreamHandler
 {
-	private static final Logger log = LoggerFactory.getLogger(HystrixMetricsStreamServlet.class);
+	private static final Logger log = LoggerFactory.getLogger(HystrixMetricsStreamHandler.class);
 
 	private static final AtomicInteger concurrentConnections = new AtomicInteger(0);
 	private static final DynamicIntProperty maxConcurrentConnections = DynamicPropertyFactory.getInstance().getIntProperty(
