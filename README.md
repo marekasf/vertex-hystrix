@@ -11,7 +11,7 @@ Library to expose [hystrix.stream](https://github.com/Netflix/Hystrix/tree/maste
 ### 2. Add project dependency	
 
 	// gradle example
-	compile 'org.marekasf:vertex-hystrix:0.0.1'
+	compile 'org.marekasf:vertex-hystrix:0.0.2'
 	
 ### 3. Add "com.netflix.hystrix:hystrix-core" to the system classpath.
 
