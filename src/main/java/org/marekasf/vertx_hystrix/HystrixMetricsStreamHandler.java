@@ -128,7 +128,7 @@ public class HystrixMetricsStreamHandler
 						List<String> jsonMessages = this.getJsonMetrics();
 						if (jsonMessages.isEmpty())
 						{
-							vertxRequest.response().write("even: ping\n");
+							vertxRequest.response().write("event: ping\n");
 						}
 						else
 						{
