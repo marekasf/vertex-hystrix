@@ -128,13 +128,13 @@ public class HystrixMetricsStreamHandler
 						List<String> jsonMessages = this.getJsonMetrics();
 						if (jsonMessages.isEmpty())
 						{
-							vertxRequest.response().write("ping: \n");
+							vertxRequest.response().write("even: ping\n");
 						}
 						else
 						{
 							for (String json : jsonMessages)
 							{
-								vertxRequest.response().write("data: " + json + "\n");
+								vertxRequest.response().write("data: " + json + "\n\n");
 							}
 						}
 
